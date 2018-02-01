@@ -4,294 +4,592 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Free Musico Website Template | Home :: w3layouts</title>
+<title>Warbler a Music Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
-<script src="script.js" type="text/javascript"></script>
+<meta name="keywords" content="Warbler Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="css/lightbox.css">
+<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
 <script src="https://connect.soundcloud.com/sdk.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="script.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".dropdown img.flag").addClass("flagvisibility");
-
-            $(".dropdown dt a").click(function() {
-                $(".dropdown dd ul").toggle();
-            });
-
-            $(".dropdown dd ul li a").click(function() {
-                var text = $(this).html();
-                $(".dropdown dt a span").html(text);
-                $(".dropdown dd ul").hide();
-                $("#result").html("Selected value is: " + getSelectedValue("sample"));
-            });
-
-            function getSelectedValue(id) {
-                return $("#" + id).find("dt a span.value").html();
-            }
-
-            $(document).bind('click', function(e) {
-                var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
-                    $(".dropdown dd ul").hide();
-            });
-
-
-            $("#flagSwitcher").click(function() {
-                $(".dropdown img.flag").toggleClass("flagvisibility");
-            });
-        });
-    </script>
-<!--slider-->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
-<script src="js/jquery-1.9.0.min.js"></script>
-    <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider();
-    });
-    </script>
+<!-- //js -->
+<!--google-fonts-->
+<link href='//fonts.googleapis.com/css?family=Josefin+Slab:400,100italic,100,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<!--//google-fonts-->
+<!--pop-up-->
+<script src="js/menu_jquery.js"></script>
+<!--//pop-up-->
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
 </head>
 <body>
-<div class="header">
-<!--	<div class="header-top">
-		<div class="wrap">
-			<div class="left-sidebar">
-				 <ul>
-					<li class="first_item">
-					<h2><i class="icon-phone"><img src="images/contact.png" alt=""/></i>(800) 000-2587</h2><span>Hours:11am-7pm
-					</span><div class="clear"></div>
-					</li>
-			    </ul>
+	<!--header--><!--
+	<div class="header" id="home">
+		<div class="container">
+			<div id="loginContainer" class="sign-farm">
+				<button type="button" id="loginButton" class="wow fadeInDown animated" data-wow-delay=".5s"><span class="glyphicon glyphicon-user" aria-hidden="true">Login</span></button>
+				<div id="loginBox">
+					<form id="loginForm">
+						<fieldset id="body">
+							<fieldset>
+								<label for="email">Email Address</label>
+								<input type="text" name="email" id="email">
+							</fieldset>
+							<fieldset>
+								<label for="password">Password</label>
+								<input type="password" name="password" id="password">
+							</fieldset>
+							<input type="submit" id="login" value="Sign in">
+							<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+						</fieldset>
+						<span><a href="#">Forgot your password?</a></span>
+					</form>
+				</div>
 			</div>
-			<div class="header_top_right">
-				<ul id="header_links">
-					<li id="header_link_contact"><a class="header_links_contact" href="#" title="contact">contact</a></li>
-					<li id="header_link_sitemap"><a class="header_links_sitemap" href="#" title="sitemap">sitemap</a></li>
-				</ul>
-				<dl id="sample" class="dropdown">
-			        <dt><a href="#"><span>Please Select the Country</span></a></dt>
-			        <dd>
-			            <ul>
-			                <li><a href="#">Australia<img class="flag" src="images/as.png" alt="" /><span class="value">AS</span></a></li>
-			                <li><a href="#">Sri Lanka<img class="flag" src="images/srl.png" alt="" /><span class="value">SL</span></a></li>
-			                <li><a href="#">New Zealand<img class="flag" src="images/nz.png" alt="" /><span class="value">NZ</span></a></li>
-			                <li><a href="#">Pakistan<img class="flag" src="images/pk.png" alt="" /><span class="value">Pk</span></a></li>
-			                <li><a href="#">Japan<img class="flag" src="images/jp.png" alt="" /><span class="value">JP</span></a></li>
-			              	<li><a href="#">United Kingdom<img class="flag" src="images/uk.png" alt="" /><span class="value">UK</span></a></li>
-			                <li><a href="#">United States<img class="flag" src="images/us.png" alt="" /><span class="value">US</span></a></li>
-			            </ul>
-			        </dd>
-   				 </dl>
- 				 <div class="dropdown" id="dropdown">
-					<input type="checkbox" id="drop1" />
-        			<label for="drop1" class="dropdown_button">$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow"></span></label>
-        				<ul class="dropdown_content">
-	       					<ul>
-								<li><a href="#"><span>$</span>Dollar</a></li>
-								<li><a href="#"><span>€</span>Euro</a></li>
-							</ul>
-						</ul>
+			<form class="navbar-form navbar-right search-box wow fadeInDown animated" data-wow-delay=".5s">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+					<button type="submit" class="btn btn-default" aria-label="Left Align">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					</button>
 				</div>
-				<div class="login">
-		   	   		<span><a href="login.html"><img src="images/login.png" alt="" title="login"></a></span>
-		   		</div>
-		 		<div class="clear"></div>
-			 </div>
-			<div class="clear"></div>
-		 </div>
-	    <div class="clear"></div>
-   </div>-->
-	<div class="header-bot">
-		<div class="wrap">
-			<div class="header-bot1">
-				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</form>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+
+	<div class="top-nav">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 				</div>
-				<!--<div class="ph-no">
-					<div class="search_box">
-					       <form>
-								<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
-					       </form>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-center cl-effect-15">
+						<li><a href="#home" class="active scroll">Home</a></li>
+						<li><a href="#about" class="scroll" data-hover="Biography">Biography</a></li>
+						<li><a href="#team" class="scroll" data-hover="Team">Team</a></li>
+						<li><a href="#album" class="scroll" data-hover="Album">Album</a></li>
+						<li><a href="#news" class="scroll" data-hover="News">News</a></li>
+						<li><a href="#contact" class="scroll" data-hover="Contact">Contact</a></li>
+					</ul>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</nav>
+	</div>-->
+	<!--navigation-->
+	<!--banner--><!--
+	<div class="banner-info">
+		<div  id="top" class="callbacks_container">
+			<ul class="rslides" id="slider3">
+				<li>
+					<div class="banner bnr-one">
+					</div>
+				</li>
+				<li>
+					<div class="banner banner1">
+					</div>
+				</li>
+				<li>
+					<div class="banner banner2">
+					</div>
+				</li>
+			</ul>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="banner-text">
+			<h1><a href="index.html" class="wow fadeInUp animated" data-wow-delay=".5s"> Warbler </a></h1>
+			<h2 class="wow fadeInUp animated" data-wow-delay=".7s">Music is the Rhythm of life! </h2>
+			<a href="#about" class="scroll bnr-about wow fadeInUp animated" data-wow-delay=".9s">About</a>
+			<a href="#news" class="scroll bnr-about bnr-news wow fadeInUp animated" data-wow-delay="1s">News</a>
+		</div>
+	</div>	-->
+	<!--//banner-->
+	<!--about--><!--s
+	<div id="about" class="about">
+		<div class="container">
+			<h3 class="title wow fadeInUp animated" data-wow-delay=".5s">About Us</h3>
+			<div class="col-md-7 about-left wow fadeInUp animated" data-wow-delay=".7s">
+
+			</div>
+			<div class="col-md-5 about-right wow fadeInUp animated" data-wow-delay=".9s">
+				<h4>Claritas est etiam processus dynaicus qui mirum</h4>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit nesciunt.</p>
+			</div>
+			<div class="clearfix"> </div>
+			<div class="about-bottom">
+				<div class="col-md-6 about-right wow bounceInUp animated" data-wow-delay=".5s">
+					<h4>Claritas est etiam processus dynaicus qui</h4>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium unde omnis iste natus error sit doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit nesciunt unde omnis iste natus error sit voluptatem.</p>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt</p>
+				</div>
+				<div class="col-md-6 about-left wow bounceInUp animated" data-wow-delay=".7s">
+					<img src="images/img2.jpg" alt=""/>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>-->
+	<!--//about-->
+	<!--skills--><!--
+	<div class="skills">
+		<div class="container">
+			<div class="col-md-6 skill-left">
+				<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
+					<span> </span>
+				</a>
+				<div id="small-dialog" class="mfp-hide">
+					<iframe src="https://www.youtube.com/embed/68huKYbT3l4" allowfullscreen> </iframe>
+				</div>
+			</div>
+			<div class="col-md-6 skill-right">
+				<h3 class="wow fadeInUp animated" data-wow-delay=".5s">Our Skills</h3>
+				<p class="wow fadeInUp animated" data-wow-delay=".6s">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+				<div class="progress wow fadeInUp animated" data-wow-delay=".7s">
+					<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+						60%
+					</div>
+				</div>
+				<div class="progress wow fadeInUp animated" data-wow-delay=".8s">
+					<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+						80%
+					</div>
+				</div>
+				<div class="progress wow fadeInUp animated" data-wow-delay=".9s">
+					<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;">
+						90%
+					</div>
+				</div>
+				<div class="progress wow fadeInUp animated" data-wow-delay="1s">
+					<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+						75%
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	<!--//skills-->
+	<!--team-->
+	<div class="team" id="team">
+		<div class="container">
+			<h3 class="title wow fadeInUp animated" data-wow-delay=".5s">OUR musi<i>gee</i></h3>
+			<div class="team-info">
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".5s">
+					<a href="#">
+						<img class="img-responsive" src="images/kavalan.jpg" alt="">
+						<div class="captn">
+							<h4>KAVALAN</h4>
+							<button class="btn" id="start1"><b>START</b></button>
+            <button class="btn" id="stop1"><b>STOP</b></button>
 						</div>
-					    <a href="#"><div class="cart">
-							<span class="cart_title">Cart(empty)</span>
-							<img src="images/marker.png" alt=""/><div class="clear"></div>
-					   </div></a>
-				</div>-->
-				<div class="clear"></div>
+					</a>
+				</div>
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".7s">
+					<a href="#">
+						<img class="img-responsive" src="images/devid.jpg" alt="">
+						<div class="captn">
+							<h4>DEVID</h4>
+							<button class="btn" id="start2"><b>START</b></button>
+            <button class="btn" id="stop2"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".9s">
+					<a href="#">
+						<img class="img-responsive" src="images/kathi.jpg" alt="">
+						<div class="captn">
+							<h4>KATHI</h4>
+							<button class="btn" id="start3"><b>START</b></button>
+            <button class="btn" id="stop3"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay="1.1s">
+					<a href="#">
+						<img class="img-responsive" src="images/birava.jpg" alt="">
+						<div class="captn">
+							<h4>BIRAVA</h4>
+							<button class="btn" id="start4"><b>START</b></button>
+            <button class="btn" id="stop4"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".9s">
+					<a href="#">
+						<img class="img-responsive" src="images/kanmani.jpg" alt="">
+						<div class="captn">
+							<h4>OK KANMANI</h4>
+							<button class="btn" id="start5"><b>START</b></button>
+            <button class="btn" id="stop5"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".9s">
+					<a href="#">
+						<img class="img-responsive" src="images/thuppakki.jpg" alt="">
+						<div class="captn">
+							<h4>THUPPAKKI</h4>
+							<button class="btn" id="start6"><b>START</b></button>
+            <button class="btn" id="stop6"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".9s">
+					<a href="#">
+						<img class="img-responsive" src="images/theri.jpg" alt="">
+						<div class="captn">
+							<h4>THERI</h4>
+							<button class="btn" id="start7"><b>START</b></button>
+            <button class="btn" id="stop7"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".9s">
+					<a href="#">
+						<img class="img-responsive" src="images/premam.jpg" alt="">
+						<div class="captn">
+							<h4>PREMAM</h4>
+							<button class="btn" id="start8"><b>START</b></button>
+						<button class="btn" id="stop8"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".9s">
+					<a href="#">
+						<img class="img-responsive" src="images/maryaan.jpg" alt="">
+						<div class="captn">
+							<h4>MARYAAN</h4>
+							<button class="btn" id="start9"><b>START</b></button>
+						<button class="btn" id="stop9"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".9s">
+					<a href="#">
+						<img class="img-responsive" src="images/vip.jpg" alt="">
+						<div class="captn">
+							<h4>VIP</h4>
+							<button class="btn" id="start10"><b>START</b></button>
+						<button class="btn" id="stop10"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".9s">
+					<a href="#">
+						<img class="img-responsive" src="images/kakkisattai.jpg" alt="">
+						<div class="captn">
+							<h4>KAKKI SATTAI</h4>
+							<button class="btn" id="start11"><b>START</b></button>
+						<button class="btn" id="stop11"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-3 team-grids wow flipInY animated" data-wow-delay=".9s">
+					<a href="#">
+						<img class="img-responsive" src="images/ayan.jpg" alt="">
+						<div class="captn">
+							<h4>AYAN</h4>
+							<button class="btn" id="start12"><b>START</b></button>
+						<button class="btn" id="stop12"><b>STOP</b></button>
+						</div>
+					</a>
+				</div>
+				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
-</div>
-
-  <div class="banner">
-	<div id="wrapper">
- 		<script src="js/responsiveslides.min.js"></script>
-			 <script>
-			    // You can also use "$(window).load(function() {"
-			    $(function () {
-			      // Slideshow 4
-			      $("#slider4").responsiveSlides({
-			        auto: true,
-			        pager: true,
-			        nav: true,
-			        speed: 500,
-			        namespace: "callbacks",
-			        before: function () {
-			          $('.events').append("<li>before event fired.</li>");
-			        },
-			        after: function () {
-			          $('.events').append("<li>after event fired.</li>");
-			        }
-			      });
-
-			    });
-			  </script>
-			  <div  id="top" class="callbacks_container">
-			      <ul class="rslides" id="slider4">
-			        <li>
-			          <div class="slider-top">
-			          	<a href="#"><img src="images/banner.jpg" alt="" /></a>
-			          </div>
-			        </li>
-			         <li>
-			          <div class="slider-top">
-			          	<a href="#"><img src="images/banner1.jpg" alt="" /></a>
-			          </div>
-			        </li>
-			         <li>
-			          <div class="slider-top">
-			          	<a href="#"><img src="images/banner2.jpg" alt="" /></a>
-			          </div>
-			        </li>
-			      </ul>
-			    </div>
-    </div>
-  </div>
- <div class="main-cont index-main">
-<div class="main">
-	<div class="wrap">
-		<div class="content-top">
-				<div class="col_1_of_3 span_1_of_3">
-
-							<img src="images/pic.jpg" alt=""/>
-							<div class="banner_content"><h2>Kavalan<span>-Vidyasagar</span></h2><p><i class="icon-chevron-sign-right"></i></p>
-                <button type="button" id="start">Start</button>
-                <button type="button"  id="stop">Stop</button>
-              </div>
-
-						<div class="icon-right"><a href="#"><img src="images/marker1.png" alt=""/></a></div>
-						<div class="clear"></div>
+	<!--//team-->
+	<!--albums--><!--
+	<div class="albums" id="album">
+		<div class="container">
+			<h3 class="title wow fadeInUp animated" data-wow-delay=".5s">Album</h3>
+			<div class="row services-info">
+				<div class="col-md-6 services-grids wow fadeInUp animated" data-wow-delay=".5s">
+					<div class="thumbnail">
+						<div class="moments-bottom">
+							<a href="images/img7.jpg" data-lightbox="example-set">
+								<img src="images/img7.jpg" class="img-responsive zoom-img " alt="">
+							</a>
+						</div>
+						<div class="caption services-caption">
+							<h4>Facilisis dignissimos luptat</h4>
+							<p>Cras justo odioda pibus facilisis dignissimos Sed ut perspiciatis unde omnis iste natus error sit voluptatem inventore veritatis et quasi architecto beatae vitae dict voluptatem accusantium</p>
+						</div>
+					</div>
 				</div>
-				<div class="col_1_of_3 span_1_of_3">
-
-							<img src="images/pic1.jpg" alt=""/>
-							<div class="banner_content"><h2>Devid<span>-Anirudh Ravichander</span></h2><p><i class="icon-chevron-sign-right"></i></p>
-                <button type="button" id="start1">Start</button>
-                <button type="button"  id="stop1">Stop</button>
-              </div>
-
-						<div class="icon-right"><a href="#"><img src="images/marker1.png" alt=""/></a></div>
+				<div class="col-md-6 services-grids wow fadeInUp animated" data-wow-delay=".7s">
+					<div class="thumbnail">
+						<div class="moments-bottom">
+							<a href="images/img8.jpg" data-lightbox="example-set">
+								<img src="images/img8.jpg" class="img-responsive zoom-img " alt="">
+							</a>
+						</div>
+						<div class="caption services-caption">
+							<h4>Facilisis dignissimos luptat</h4>
+							<p>Cras justo odioda pibus facilisis dignissimos Sed ut perspiciatis unde omnis iste natus error sit voluptatem inventore veritatis et quasi architecto beatae vitae dict voluptatem accusantium</p>
+						</div>
+					</div>
 				</div>
-				<div class="col_1_of_3 span_1_of_3">
-
-							<img src="images/pic2.jpg" alt=""/>
-							<div class="banner_content"><h2>Kathi<span>-Anirudh Ravichander</span></h2><p><i class="icon-chevron-sign-right"></i></p>
-                <button type="button" id="start3">Start</button>
-                <button type="button"  id="stop3">Stop</button>
-              </div>
-
-						<div class="icon-right"><a href="#"><img src="images/marker1.png" alt=""/></a></div>
+				<div class="col-md-6 services-grids wow fadeInUp animated" data-wow-delay=".5s">
+					<div class="thumbnail">
+						<div class="moments-bottom">
+							<a href="images/img9.jpg" data-lightbox="example-set">
+								<img src="images/img9.jpg" class="img-responsive zoom-img " alt="">
+							</a>
+						</div>
+						<div class="caption services-caption">
+							<h4>Facilisis dignissimos luptat</h4>
+							<p>Cras justo odioda pibus facilisis dignissimos Sed ut perspiciatis unde omnis iste natus error sit voluptatem inventore veritatis et quasi architecto beatae vitae dict voluptatem accusantium</p>
+						</div>
+					</div>
 				</div>
-				<div class="clear"></div>
-		</div>
-
-    <div class="content-top">
-        <div class="col_1_of_3 span_1_of_3">
-
-              <img src="images/birava.jpg" alt=""/>
-              <div class="banner_content"><h2>Birava<span>-Santhosh Narayanan</span></h2><p><i class="icon-chevron-sign-right"></i></p>
-                <button type="button" id="start4">Start</button>
-                <button type="button"  id="stop4">Stop</button>
-              </div>
-
-            <div class="icon-right"><a href="#"><img src="images/marker1.png" alt=""/></a></div>
-            <div class="clear"></div>
-        </div>
-        <div class="col_1_of_3 span_1_of_3">
-
-              <img src="images/ok.jpg" alt=""/>
-              <div class="banner_content"><h2>Ok Kanmani<span>-A.R.Rahman</span></h2><p><i class="icon-chevron-sign-right"></i></p>
-                <button type="button" id="start5">Start</button>
-                <button type="button"  id="stop5">Stop</button>
-              </div>
-
-            <div class="icon-right"><a href="#"><img src="images/marker1.png" alt=""/></a></div>
-        </div>
-        <div class="col_1_of_3 span_1_of_3">
-
-              <img src="images/thu.jpg" alt=""/>
-              <div class="banner_content"><h2>Thuppaki<span>-Harris Jayaraj</span></h2><p><i class="icon-chevron-sign-right"></i></p>
-                <button type="button" id="start6">Start</button>
-                <button type="button"  id="stop6">Stop</button>
-              </div>
-
-            <div class="icon-right"><a href="#"><img src="images/marker1.png" alt=""/></a></div>
-        </div>
-        <div class="clear"></div>
-    </div>
-
-
-
-  </div>
-</div>
-</div><!--
-<div class="footer">
-	<div class="wrap">
-		<div class="footer-top">
-			<div class="footer-grid">
-				<h3>About us</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  consectetur adipisicing elit, sed do eiusmod tempor.</p>
-				<a href="#">ReadMore</a>
+				<div class="col-md-6 services-grids wow fadeInUp animated" data-wow-delay=".7s">
+					<div class="thumbnail">
+						<div class="moments-bottom">
+							<a href="images/img10.jpg" data-lightbox="example-set">
+								<img src="images/img10.jpg" class="img-responsive zoom-img " alt="">
+							</a>
+						</div>
+						<div class="caption services-caption">
+							<h4>Facilisis dignissimos luptat</h4>
+							<p>Cras justo odioda pibus facilisis dignissimos Sed ut perspiciatis unde omnis iste natus error sit voluptatem inventore veritatis et quasi architecto beatae vitae dict voluptatem accusantium</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
 			</div>
-			<div class="footer-grid center-grid">
-				<h3>Recent posts</h3>
-				<ul>
-					<li><a href="#">eiusmod tempor incididunt</a></li>
-					<li><a href="#">adipisicing elit, sed</a></li>
-					<li><a href="#">mod tempor incididunt ut</a></li>
-					<li><a href="#">dipisicing elit, sed do</a></li>
-					<li><a href="#">econsectetur adipisicing</a></li>
-				</ul>
-			</div>
-			<div class="footer-grid twitts">
-				<h3>Latest Tweets</h3>
-				<p><label>@Lorem ipsum</label>dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-				<span>10 minutes ago</span>
-				<p><label>@consectetur</label>dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<span>15 minutes ago</span>
-			</div>
-			<div class="footer-grid">
-				<h3>DID YOU KNOW?</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-				<a href="#">ReadMore</a>
-			</div>
-			<div class="clear"> </div>
-	</div>
 		</div>
 	</div>
-		<div class="copy-right">
-			<div class="wrap">
-				<p>&copy; 2013 Musico. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+	<script src="js/lightbox-plus-jquery.min.js"></script>
+
+
+	<div class="news" id="news">
+		<div class="container">
+			<h3 class="wow fadeInUp animated" data-wow-delay=".5s">News & Events</h3>
+			<div class="news-info">
+				<div class="col-md-4 news-grids wow zoomIn animated" data-wow-delay=".5s">
+					<h4><span>13/16</span>April</h4>
+					<p>Cras justo odioda pibus facilisis dignissimos Sed ut perspiciatis unde omnis iste natus error sit voluptatem inventore veritatis</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col-md-4 news-grids wow zoomIn animated" data-wow-delay=".7s">
+					<h4><span>10/16</span>April</h4>
+					<p>Cras justo odioda pibus facilisis dignissimos Sed ut perspiciatis unde omnis iste natus error sit voluptatem inventore veritatis</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col-md-4 news-grids wow zoomIn animated" data-wow-delay=".9s">
+					<h4><span>05/16</span>April</h4>
+					<p>Cras justo odioda pibus facilisis dignissimos Sed ut perspiciatis unde omnis iste natus error sit voluptatem inventore veritatis</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="clearfix"> </div>
 			</div>
 		</div>
-		<div class="clear"> </div>-->
+	</div>
+
+	<div class="about-skills">
+		<div class="container">
+			<div class="about-choose">
+				<div class="col-md-4 about-choose-info wow fadeInLeft animated" data-wow-delay=".5s">
+					<h3>Latest Songs</h3>
+					<ul>
+						<li><a href="#">Donec ut quam ligula feugiat.</a></li>
+						<li><a href="#">Etiam volutpat tortor quis</a></li>
+						<li><a href="#">Fusce vitae dolor vitae.</a></li>
+						<li><a href="#">Proin commodo metus sed.</a></li>
+						<li><a href="#">Nunc volutpat neque vel</a></li>
+						<li><a href="#">condimentum fringilla </a></li>
+						<li><a href="#">Vivamus consequat dolor.</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 about-choose-info wow fadeInLeft animated" data-wow-delay=".7s">
+					<h3>Events Calendar</h3>
+					<div class="histry">
+						<h4>2010-2012</h4>
+						<h5><a href="#">Aenean pulvinar ac enimet </a></h5>
+						<p>In sit amet sapien eros. Integer in tincidunt velit. Ut in tincidunt velit sapien est </p>
+					</div>
+					<div class="histry">
+						<h4>2012-2015</h4>
+						<h5><a href="#">Aenean pulvinar ac enimet </a></h5>
+						<p>In sit amet sapien eros. Integer in tincidunt velit. Ut in tincidunt velit sapien est </p>
+					</div>
+				</div>
+				<div class="col-md-4 about-choose-info wow fadeInLeft animated" data-wow-delay=".9s">
+					<h3>Awards</h3>
+					<ul>
+						<li><a href="#">Donec ut quam ligula feugiat.</a></li>
+						<li><a href="#">Etiam volutpat tortor lobortis</a></li>
+						<li><a href="#">Fusce vitae dolor varius.</a></li>
+						<li><a href="#">Proin commodo metus lobortis.</a></li>
+						<li><a href="#">Nunc volutpat neque vel</a></li>
+						<li><a href="#">condimentum fringilla</a></li>
+						<li><a href="#">Vivamus consequat dolor</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>-->
+	<!--//about-skills-->
+	<!--contact-->
+	<div class="contact" id="contact">
+		<div class="container">
+			<h3 class="wow fadeInUp animated" data-wow-delay=".5s">Get In touch</h3>
+			<div class="contact-info">
+
+				<div class="col-md-4 contact-grids wow fadeInRight animated" data-wow-delay=".7s">
+					<form>
+						<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+						<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+						<input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
+						<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+						<input type="submit" value="Submit" >
+					</form>
+				</div>
+				<div class="col-md-4 contact-grids wow fadeInRight animated" data-wow-delay=".9s">
+					<p>In sit amet sapien eros. Integer in tincidunt velit. Ut in tincidunt velit sapien est Cras justo odioda pibus facilisis dignissimos Sed ut perspiciatis unde omnis iste natus error sit voluptatem inventore veritatis</p>
+					<ul>
+						<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+							756 globel Place, Australia.
+						</li>
+						<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+							+123 2222 222
+						</li>
+						<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+							<a href="mailto:example@mail.com">mail@example.com</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="icons wow fadeInUp animated" data-wow-delay=".5s">
+					<ul>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><img src="images/i1.png" alt=""/></a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><img src="images/i2.png" alt=""/> </a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Google+"><img src="images/i3.png" alt=""/></a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="LinkedIn"><img src="images/i4.png" alt=""/> </a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><img src="images/i5.png" alt=""/> </a></li>
+					</ul>
+					<script>$(function () {
+					  $('[data-toggle="tooltip"]').tooltip()
+					})</script>
+				</div>
+				<p class="wow fadeInUp animated" data-wow-delay=".7s">© 2016 Warbler . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			</div>
+		</div>
+	</div>
+	<!--//contact-->
+		<!-- banner-text Slider starts Here -->
+		<script src="js/responsiveslides.min.js"></script>
+		<script>
+			// You can also use "$(window).load(function() {"
+				$(function () {
+				// Slideshow 3
+					$("#slider3").responsiveSlides({
+					auto: true,
+					pager:true,
+					nav:true,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+					$('.events').append("<li>before event fired.</li>");
+					},
+					after: function () {
+						$('.events').append("<li>after event fired.</li>");
+					}
+				});
+			});
+		</script>
+		<!--//End-slider-script -->
+	<!-- start-smooth-scrolling-->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!--//end-smooth-scrolling-->
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<!--//smooth-scrolling-of-move-up-->
+	<!-- pop-up-box -->
+	<script type="text/javascript" src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<!--//pop-up-box -->
+	<!--magnificPopup-->
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+				});
+			});
+		</script>
+		<!--//magnificPopup-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>

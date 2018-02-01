@@ -72,4 +72,69 @@ $(document).ready(function() {
     });
   });
 
+  SC.stream('/tracks/260940565', function(sound) {
+    $('#start7').click(function(e) {
+      e.preventDefault();
+      sound.start();
+    });
+    $('#stop7').click(function(e) {
+      e.preventDefault();
+      sound.stop();
+    });
+  });
+
+  SC.stream('/tracks/2209020178', function(sound) {
+    $('#start8').click(function(e) {
+      e.preventDefault();
+      sound.start();
+    });
+    $('#stop8').click(function(e) {
+      e.preventDefault();
+      sound.stop();
+    });
+  });
+
+  SC.stream('/tracks/94431903', function(sound) {
+    $('#start9').click(function(e) {
+      e.preventDefault();
+      sound.start();
+    });
+    $('#stop9').click(function(e) {
+      e.preventDefault();
+      sound.stop();
+    });
+  });
+
+  SC.stream('/tracks/138000292', function(sound) {
+    $('#start10').click(function(e) {
+      e.preventDefault();
+      sound.start();
+    });
+    $('#stop10').click(function(e) {
+      e.preventDefault();
+      sound.stop();
+    });
+  });
+
+  SC.stream('/tracks/181294675', function(sound) {
+    $('#start11').click(function(e) {
+      e.preventDefault();
+      sound.start();
+    });
+    $('#stop11').click(function(e) {
+      e.preventDefault();
+      sound.stop();
+    });
+  });
+
+  SC.stream('/tracks/21035349', function(sound) {
+    $('#start12').click(function(e) {
+      e.preventDefault();
+      sound.start();
+    });
+    $('#stop12').click(function(e) {
+      e.preventDefault();
+      sound.stop();
+    });
+  });
 });
